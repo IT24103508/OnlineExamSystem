@@ -1,4 +1,69 @@
 package com.exam.model;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 public class Student {
+    private String studentId;
+    private String name;
+    private String email;
+    private String course;
+    private String passwordHash;
+
+    // Default constructor
+    public Student() {
+    }
+
+    // Constructor with all fields
+    public Student(String studentId, String name, String email, String course, String passwordHash) {
+        this.studentId = studentId;
+        this.name = name;
+        this.email = email;
+        this.course = course;
+        this.passwordHash = passwordHash;
+    }
+
+    // Getters and setters
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
+
+    public boolean checkPassword(String password) {
+        return BCrypt.checkpw(password, passwordHash);
+    }
 }
