@@ -1,0 +1,16 @@
+[
+    {
+        "studentId": "S001",
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "course": "Computer Science",
+        "passwordHash": "$2a$10$3zHz1X3fK8mG1Z1z2X3z2e0z2X3z2X3z2X3z2X3z2X3z2X3z2X3z"
+    },
+    {
+        "studentId": "S002",
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "course": "Mathematics",
+        "passwordHash": "$2a$10$4aHz1X3fK8mG1Z1z2X3z2e0z2X3z2X3z2X3z2X3z2X3z2X3z2X4a"
+    }
+]
