@@ -23,7 +23,7 @@ public class EditExamServlet extends HttpServlet {
         String date = request.getParameter("date");
         String durationStr = request.getParameter("duration");
 
-        // Server-side validation
+        
         if (subject == null || subject.trim().isEmpty()) {
             request.setAttribute("error", "Subject is required");
             request.getRequestDispatcher("admin.jsp").forward(request, response);
