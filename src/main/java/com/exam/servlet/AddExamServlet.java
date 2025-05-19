@@ -27,7 +27,7 @@ public class AddExamServlet extends HttpServlet {
         String date = request.getParameter("date");
         String durationStr = request.getParameter("duration");
 
-        // Server-side validation
+        
         if (examId == null || examId.trim().isEmpty()) {
             request.setAttribute("error", "Exam ID is required");
             request.getRequestDispatcher("admin.jsp").forward(request, response);
